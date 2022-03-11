@@ -10,10 +10,10 @@ namespace ShootingDice
         public override void Play(Player other)
         {
             // Call roll for "this" object and for the "other" object
-            Console.Write("Please roll the die (1-6): ");
+            Console.Write($"Please roll the die (1-{DiceSize}): ");
             bool success = int.TryParse(Console.ReadLine(), out int myRoll);
 
-            while (!success || myRoll > 6 || myRoll < 1)
+            while (!success || myRoll > DiceSize || myRoll < 1)
             {
                 Console.Write("Please roll the die (1-6): ");
                 success = int.TryParse(Console.ReadLine(), out myRoll);

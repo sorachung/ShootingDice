@@ -32,14 +32,6 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
-            List<Player> players = new List<Player>() {
-                player1, player2, player3, large
-            };
-
-            PlayMany(players);
-
-            Console.WriteLine("-------------------");
-
             SmackTalkingPlayer smackPlayer = new SmackTalkingPlayer()
             {
                 Name = "Smacker",
@@ -57,14 +49,14 @@ namespace ShootingDice
 
             oneHigherPlayer.Play(player1);
 
-            // Console.WriteLine("-------------------");
+            Console.WriteLine("-------------------");
 
-            // HumanPlayer humanPlayer = new HumanPlayer()
-            // {
-            //     Name = "Human"
-            // };
+            HumanPlayer humanPlayer = new HumanPlayer()
+            {
+                Name = "Human"
+            };
 
-            // humanPlayer.Play(player1);
+            humanPlayer.Play(player1);
 
             Console.WriteLine("-------------------");
 
@@ -118,6 +110,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+
+
+            List<Player> players = new List<Player>() {
+                player1, player2, player3, large, smackPlayer, oneHigherPlayer, humanPlayer, creativeSmackPlayer, soreLoserPlayer, upperHalfPlayer, soreUpperPlayer
+            };
+
+            PlayMany(players);
+
+            Console.WriteLine("-------------------");
         }
 
         static void PlayMany(List<Player> players)
@@ -146,7 +147,15 @@ namespace ShootingDice
                 // Make adjacent players play noe another
                 Player player1 = shuffledPlayers[i];
                 Player player2 = shuffledPlayers[i + 1];
-                player1.Play(player2);
+                try
+                {
+                    player1.Play(player2);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
             }
         }
     }
