@@ -77,6 +77,22 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SoreLoserPlayer soreLoserPlayer = new SoreLoserPlayer()
+            {
+                Name = "Sore Loser"
+            };
+
+            try
+            {
+                soreLoserPlayer.Play(player1);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine("-------------------");
+
         }
 
         static void PlayMany(List<Player> players)
