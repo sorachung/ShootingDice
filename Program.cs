@@ -47,6 +47,16 @@ namespace ShootingDice
             };
 
             smackPlayer.Play(player1);
+
+            Console.WriteLine("-------------------");
+
+            OneHigherPlayer oneHigherPlayer = new OneHigherPlayer()
+            {
+                Name = "OneHigher"
+            };
+
+            oneHigherPlayer.Play(player1);
+
             Console.WriteLine("-------------------");
 
         }
