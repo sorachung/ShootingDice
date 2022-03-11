@@ -93,6 +93,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            UpperHalfPlayer upperHalfPlayer = new UpperHalfPlayer()
+            {
+                Name = "Upper Half"
+            };
+
+            upperHalfPlayer.Play(player1);
+
+            Console.WriteLine("-------------------");
+
         }
 
         static void PlayMany(List<Player> players)
