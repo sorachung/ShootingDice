@@ -57,14 +57,23 @@ namespace ShootingDice
 
             oneHigherPlayer.Play(player1);
 
+            // Console.WriteLine("-------------------");
+
+            // HumanPlayer humanPlayer = new HumanPlayer()
+            // {
+            //     Name = "Human"
+            // };
+
+            // humanPlayer.Play(player1);
+
             Console.WriteLine("-------------------");
 
-            HumanPlayer humanPlayer = new HumanPlayer()
+            CreativeSmackTalkingPlayer creativeSmackPlayer = new CreativeSmackTalkingPlayer()
             {
-                Name = "Human"
+                Name = "Creative Smacker"
             };
 
-            humanPlayer.Play(player1);
+            creativeSmackPlayer.Play(player1);
 
             Console.WriteLine("-------------------");
 

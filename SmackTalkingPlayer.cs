@@ -16,7 +16,7 @@ namespace ShootingDice
             int otherRoll = other.Roll();
 
             Console.WriteLine($"{Name} rolls a {myRoll}");
-            Console.WriteLine(Taunt);
+            Console.WriteLine($"{Name} says: {Taunt}");
             Console.WriteLine($"{other.Name} rolls a {otherRoll}");
             if (myRoll > otherRoll)
             {
